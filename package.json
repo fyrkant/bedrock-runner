@@ -2,7 +2,7 @@
     "name": "bedrock-runner",
     "displayName": "bedrock-runner",
     "description": "Bedrock test runner helper.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "fyrkant",
     "engines": {
         "vscode": "^1.19.0"
@@ -11,20 +11,31 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+      "onCommand:extension.runBedrockManual",
+      "onCommand:extension.runBedrockManualTestDir",
+      "onCommand:extension.runBedrockPhantom"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
+          {
+            "command": "extension.runBedrockManual",
+            "title": "Run bedrock browser test for this file"
+          },
+          {
+            "command": "extension.runBedrockManualTestDir",
+            "title": "Run bedrock browser test for closest test directory"
+          },
+          {
+            "command": "extension.runBedrockPhantom",
+            "title": "Run bedrock phantom test for this file"
+          }
         ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
+        "lint": "tslint src/**/*.ts",
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
@@ -34,5 +45,9 @@
         "vscode": "^1.1.10",
         "@types/node": "^9.3.0",
         "@types/mocha": "^2.2.47"
+    },
+    "dependencies": {
+        "spawn-command": "0.0.2-1",
+        "tslint": "^5.9.1"
     }
 }
