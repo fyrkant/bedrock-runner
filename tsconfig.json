@@ -5,6 +5,7 @@
         "outDir": "out",
         "lib": [ "es6", "dom"],
         "sourceMap": true,
+        "strict": true,
         "rootDir": "src"
     },
     "exclude": [

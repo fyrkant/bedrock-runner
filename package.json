@@ -12,6 +12,7 @@
     ],
     "activationEvents": [
       "onCommand:extension.runBedrockManual",
+      "onCommand:extension.runBedrockManualCustomRoutes",
       "onCommand:extension.runBedrockManualTestDir",
       "onCommand:extension.runBedrockPhantom"
     ],
@@ -23,8 +24,16 @@
             "title": "Run bedrock browser test for this file"
           },
           {
+            "command": "extension.runBedrockManualCustomRoutes",
+            "title": "Run bedrock browser test for this file with custom routes"
+          },
+          {
             "command": "extension.runBedrockManualTestDir",
             "title": "Run bedrock browser test for closest test directory"
+          },
+          {
+            "command": "extension.runBedrockManualTestDirCustomRoutes",
+            "title": "Run bedrock browser test for closest test directory with custom routes"
           },
           {
             "command": "extension.runBedrockPhantom",
