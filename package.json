@@ -1,8 +1,12 @@
 {
     "name": "bedrock-runner",
     "displayName": "bedrock-runner",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fyrkant/bedrock-runner.git"
+    },
     "description": "Bedrock test runner helper.",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "publisher": "fyrkant",
     "engines": {
         "vscode": "^1.19.0"
@@ -11,34 +15,34 @@
         "Other"
     ],
     "activationEvents": [
-      "onCommand:extension.runBedrockManual",
-      "onCommand:extension.runBedrockManualCustomRoutes",
-      "onCommand:extension.runBedrockManualTestDir",
-      "onCommand:extension.runBedrockPhantom"
+        "onCommand:extension.runBedrockManual",
+        "onCommand:extension.runBedrockManualCustomRoutes",
+        "onCommand:extension.runBedrockManualTestDir",
+        "onCommand:extension.runBedrockPhantom"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
-          {
-            "command": "extension.runBedrockManual",
-            "title": "Run bedrock browser test for this file"
-          },
-          {
-            "command": "extension.runBedrockManualCustomRoutes",
-            "title": "Run bedrock browser test for this file with custom routes"
-          },
-          {
-            "command": "extension.runBedrockManualTestDir",
-            "title": "Run bedrock browser test for closest test directory"
-          },
-          {
-            "command": "extension.runBedrockManualTestDirCustomRoutes",
-            "title": "Run bedrock browser test for closest test directory with custom routes"
-          },
-          {
-            "command": "extension.runBedrockPhantom",
-            "title": "Run bedrock phantom test for this file"
-          }
+            {
+                "command": "extension.runBedrockManual",
+                "title": "Run bedrock browser test for this file"
+            },
+            {
+                "command": "extension.runBedrockManualCustomRoutes",
+                "title": "Run bedrock browser test for this file with custom routes"
+            },
+            {
+                "command": "extension.runBedrockManualTestDir",
+                "title": "Run bedrock browser test for closest test directory"
+            },
+            {
+                "command": "extension.runBedrockManualTestDirCustomRoutes",
+                "title": "Run bedrock browser test for closest test directory with custom routes"
+            },
+            {
+                "command": "extension.runBedrockPhantom",
+                "title": "Run bedrock phantom test for this file"
+            }
         ]
     },
     "scripts": {

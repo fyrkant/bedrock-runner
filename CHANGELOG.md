@@ -1,4 +1,4 @@
-## [1.1.1]
+## [1.1.2]
 
 -- Changed to double quotes in path for Windows compatibility.
 
