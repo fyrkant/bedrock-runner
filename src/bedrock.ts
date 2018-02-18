@@ -52,7 +52,7 @@ const bedrockRunner = (executable: string, args: string[], options: Options = {r
 
   const customRoute = await getCustomRoute(options.customRoutes === true);
   const customRoutesCommand = options.customRoutes && customRoute ? `--customRoutes ${customRoute}` : '';
-  const terminalCommand = `node_modules/.bin/${executable} ${args.join(' ')} -${ options.runDir ? 'd' : 'f' } ${path} ${customRoutesCommand}`;
+  const terminalCommand = `node_modules/.bin/${executable} ${args.join(' ')} -${ options.runDir ? 'd' : 'f' } "${path}" ${customRoutesCommand}`;
 
   if (executable === 'bedrock-auto') {
     run(terminalCommand, '')
